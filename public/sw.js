@@ -5,3 +5,8 @@ if (workbox) {
 } else {
   console.log(`Boo! Workbox didn't load 😬`);
 }
+
+workbox.routing.registerRoute(
+  /\.js$/,
+  new workbox.strategies.NetworkFirst()
+);
